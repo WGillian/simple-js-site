@@ -115,7 +115,7 @@ var johnsTask = function (names){
 
 var newArray = johnsTask(newPeople);
 
-newArray.map(function (names){console.log(names);});
+newArray.forEach(function (names){console.log(names);});
 
 
 
@@ -123,22 +123,18 @@ newArray.map(function (names){console.log(names);});
 
 
 var map = newPeople.map(function (names){
-	if(names.slice(0, 1) === "J"){
+		if(names.slice(0, 1) === "J"){
 		return names.slice(1, names.length);
 		} else if (names.slice(0, 1) === "R"){
 		return names.slice(0, names.length-2);
 		} else {
 		return names;
 		}
-	}
+		}
 );
 
 
-map.map(function (names){console.log(names);});
-
-
-
-
+map.forEach(function (names){console.log(names);});
 
 
 
