@@ -98,6 +98,48 @@ console.log(task8(newPeople));
 
 
 
+var johnsTask = function (names){
+	var list = [];
+	for(var i = 0; i < names.length; i++){
+		if(names[i].slice(0, 1) === "J"){
+		list.push(names[i].slice(1, names[i].length));
+		} else if (names[i].slice(0, 1) === "R"){
+		list.push(names[i].slice(0, names[i].length-2));
+		} else {
+		list.push(names[i]);
+		}
+	};
+	return list;
+	
+};
+
+var newArray = johnsTask(newPeople);
+
+newArray.map(function (names){console.log(names);});
+
+
+
+
+
+
+var map = newPeople.map(function (names){
+	if(names.slice(0, 1) === "J"){
+		return names.slice(1, names.length);
+		} else if (names.slice(0, 1) === "R"){
+		return names.slice(0, names.length-2);
+		} else {
+		return names;
+		}
+	}
+);
+
+
+map.map(function (names){console.log(names);});
+
+
+
+
+
 
 
 
