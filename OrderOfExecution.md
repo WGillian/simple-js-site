@@ -63,7 +63,7 @@ subString
 "he".length
 // => 2
 2 + "world"
-// => 2world
+// => "2world"
 
 
 4)
